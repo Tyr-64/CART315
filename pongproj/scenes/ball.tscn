@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://iuv2cv10iesk"]
+
+[ext_resource type="Script" uid="uid://dp6h3to2r04hu" path="res://scripts/ball.gd" id="1_7s4qf"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_sxki6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7ri8"]
+
+[node name="Ball" type="CharacterBody2D" unique_id=45399392]
+script = ExtResource("1_7s4qf")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=896257231]
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_sxki6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127170448]
+shape = SubResource("RectangleShape2D_m7ri8")

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://5wf035ac26k3"]
+
+[ext_resource type="Script" uid="uid://bs52akclm1re5" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b7u5untc4q73w" path="res://scenes/hud.tscn" id="2_p57ef"]
+[ext_resource type="PackedScene" uid="uid://1estv4m3yd5l" path="res://scenes/paddle.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://iuv2cv10iesk" path="res://scenes/ball.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://6j05144p8p7p" path="res://scenes/wall.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dm8wprv6do8aj" path="res://scenes/detector.tscn" id="5_iywne"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_sxki6"]
+
+[node name="Game" type="Node2D" unique_id=1135469385]
+script = ExtResource("1_uwrxv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1230827434]
+
+[node name="HUD" parent="CanvasLayer" unique_id=1266110921 instance=ExtResource("2_p57ef")]
+
+[node name="Background" type="MeshInstance2D" parent="." unique_id=47631615]
+modulate = Color(0, 0, 0, 1)
+z_index = -10
+position = Vector2(642, 359.5)
+scale = Vector2(1290, 726.99994)
+mesh = SubResource("QuadMesh_sxki6")
+metadata/_edit_lock_ = true
+
+[node name="PaddleOne" parent="." unique_id=1642076218 instance=ExtResource("2_yqjtg")]
+position = Vector2(50, 360)
+is_player_one = true
+
+[node name="PaddleTwo" parent="." unique_id=1691102474 instance=ExtResource("2_yqjtg")]
+position = Vector2(1230, 360)
+
+[node name="Ball" parent="." unique_id=45399392 instance=ExtResource("3_lnu2h")]
+position = Vector2(650, 360)
+
+[node name="Wall" parent="." unique_id=142778015 instance=ExtResource("4_lbhrr")]
+position = Vector2(640, -10)
+
+[node name="Wall2" parent="." unique_id=2144412169 instance=ExtResource("4_lbhrr")]
+position = Vector2(640, 730)
+
+[node name="DetectorLeft" parent="." unique_id=892161955 instance=ExtResource("5_iywne")]
+position = Vector2(-10, 360)
+is_left = true
+
+[node name="DetectorRight" parent="." unique_id=135289333 instance=ExtResource("5_iywne")]
+position = Vector2(1290, 360)
+
+[node name="StartDelay" type="Timer" parent="." unique_id=1823337819]
+one_shot = true

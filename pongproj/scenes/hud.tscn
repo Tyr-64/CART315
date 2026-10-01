@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b7u5untc4q73w"]
+
+[ext_resource type="Script" uid="uid://bn2mje7konoy4" path="res://scripts/hud.gd" id="1_ahhtf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sxki6"]
+font_size = 100
+
+[node name="HUD" type="Control" unique_id=1266110921]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahhtf")
+
+[node name="LeftScore" type="Label" parent="." unique_id=1966818696]
+layout_mode = 0
+offset_left = 150.0
+offset_right = 450.0
+offset_bottom = 150.0
+text = "0"
+label_settings = SubResource("LabelSettings_sxki6")
+horizontal_alignment = 1
+
+[node name="RightScore" type="Label" parent="." unique_id=1992455036]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -450.0
+offset_right = -150.0
+offset_bottom = 150.0
+grow_horizontal = 0
+text = "0"
+label_settings = SubResource("LabelSettings_sxki6")
+horizontal_alignment = 1
