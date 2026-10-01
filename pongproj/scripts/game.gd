@@ -57,7 +57,11 @@ func _on_detector_ball_out(is_left):
 	
 	hud.set_new_score(score)
 	
-	if score.x >= final_score || score.y >= final_score:
+	if score.x >= final_score:
+		hud.win(true)
+		reset_game()
+	elif score.y >= final_score:
+		hud.win(false)
 		reset_game()
 	else:
 		reset_round()

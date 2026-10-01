@@ -48,4 +48,5 @@ is_left = true
 position = Vector2(1290, 360)
 
 [node name="StartDelay" type="Timer" parent="." unique_id=1823337819]
+wait_time = 0.061
 one_shot = true
