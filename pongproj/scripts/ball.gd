@@ -23,10 +23,10 @@ func bounce_from_paddle(paddle_y_pos, paddle_height):
 
 func reset(reset_pos):
 	global_position = reset_pos
-	speed = START_SPEED
-	move_dir.x = 1
-	#move_dir.x = [-1, 1].pick_random()
 	move_dir.y = randf() * [-1, 1].pick_random()
+	move_dir.x = 1
+	speed = START_SPEED
+	#move_dir.x = [-1, 1].pick_random()
 	
 	active = false
 	

@@ -26,6 +26,7 @@ metadata/_edit_lock_ = true
 
 [node name="PaddleOne" parent="." unique_id=1642076218 instance=ExtResource("2_yqjtg")]
 position = Vector2(50, 360)
+priority = 1
 is_player_one = true
 
 [node name="PaddleTwo" parent="." unique_id=1691102474 instance=ExtResource("2_yqjtg")]
@@ -48,5 +49,5 @@ is_left = true
 position = Vector2(1290, 360)
 
 [node name="StartDelay" type="Timer" parent="." unique_id=1823337819]
-wait_time = 0.061
+wait_time = 0.08
 one_shot = true

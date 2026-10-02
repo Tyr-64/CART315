@@ -16,9 +16,13 @@ func reset_score():
 func win(leftWin):
 	if leftWin:
 		winScreen.global_position.y = 120
-		winScreen.global_position.x = 250
+		winScreen.global_position.x = 200
 		await get_tree().create_timer(1).timeout
 		winScreen.global_position.y = -120
 		winScreen.global_position.x = -250
 	elif leftWin == false:
-		print("right won")
+		winScreen.global_position.y = 120
+		winScreen.global_position.x = 900
+		await get_tree().create_timer(1).timeout
+		winScreen.global_position.y = -120
+		winScreen.global_position.x = -250
